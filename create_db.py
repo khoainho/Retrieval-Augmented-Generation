@@ -38,8 +38,6 @@ def split_text(documents: list[Document]):
         add_start_index=True,
     )
     chunks = text_splitter.split_documents(documents)
-
-    document = chunks[10]
     return chunks
 
 # Save chunks to Chroma DB with OpenAI

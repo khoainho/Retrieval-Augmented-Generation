@@ -37,6 +37,7 @@ def main():
         print(f"Unable to find matching results.")
         return
 
+    # Print generated answer
     context_text = "\n\n---------------------------------------\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
@@ -45,6 +46,7 @@ def main():
     model = ChatOpenAI()
     response_text = model.invoke(prompt)
 
+    # Print metadata related to generated answer to qeury
     sources = [doc.metadata.get("source", None) for doc, _score in results]
     formatted_response = f"Response: {response_text}\nSources: {sources}"
     print(formatted_response)
