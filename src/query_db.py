@@ -4,9 +4,9 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores.chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
+from dotenv import load_dotenv
 
 CHROMA_PATH = "chromaDB"
-os.environ["OPENAI_API_KEY"] = "PLACE YOUR API KEY HERE"
 
 # Repsonse prompt template
 PROMPT_TEMPLATE = """
@@ -19,6 +19,8 @@ Answer:
 Answer based on the question: {question}
 """
 
+load_dotenv()
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 def main():
     # Create CLI for user imput

@@ -5,10 +5,13 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores.chroma import Chroma
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from dotenv import load_dotenv
 
 DATA_SOURCE = "/Users/khoanguyen/Code/RAG/source_data/harry_potter_chapter_1.txt"
 CHROMA_PATH = "chromaDB"
-os.environ["OPENAI_API_KEY"] = "PLACE YOUR API KEY HERE"
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 def main():
     generate_data_store()
