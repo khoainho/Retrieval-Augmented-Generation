@@ -8,7 +8,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 DATA_SOURCE = "/Users/khoanguyen/Code/RAG/source_data/harry_potter_chapter_1.txt"
 CHROMA_PATH = "chromaDB"
-os.environ["OPENAI_API_KEY"] = "${PLACE YOUR API KEY HERE}"
+os.environ["OPENAI_API_KEY"] = "PLACE YOUR API KEY HERE"
 
 def main():
     generate_data_store()

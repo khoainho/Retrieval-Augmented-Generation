@@ -6,7 +6,7 @@ from langchain.vectorstores.chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
 
 CHROMA_PATH = "chromaDB"
-os.environ["OPENAI_API_KEY"] = "${PLACE YOUR API KEY HERE}"
+os.environ["OPENAI_API_KEY"] = "PLACE YOUR API KEY HERE"
 
 # Repsonse prompt template
 PROMPT_TEMPLATE = """
