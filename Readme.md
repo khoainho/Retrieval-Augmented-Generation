@@ -20,11 +20,11 @@ os.environ["OPENAI_API_KEY"] = "${PLACE YOUR API KEY HERE}"
 ```
 4. Run the following command to create your Chroma DB.
 ```python
-python create_db.py
+python src/create_db.py
 ```
 5. Run the following command to query your question to the DB.
 ```python
-python query_db.py "Who is Harry Potter?"
+python src/query_db.py "Who is Harry Potter?"
 ```
 
 ### Sample Response: 
