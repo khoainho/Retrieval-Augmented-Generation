@@ -19,10 +19,10 @@ This application demonstrate the uses of Retrieval-Augmented Generation. RAG is 
 pip install -r requirements.txt
 ```
 
-3. Replace the enivorment placeholder with your OpenAI API key.
+3. Create a .env file in the src folder and insert your OpenAI API key as follows.
 
 ```python
-os.environ["OPENAI_API_KEY"] = "PLACE YOUR API KEY HERE"
+OPENAI_API_KEY = PLACE YOUR API KEY HERE
 ```
 
 4. Run the following command to create your Chroma DB.
